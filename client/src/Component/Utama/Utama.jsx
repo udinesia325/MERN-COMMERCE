@@ -3,17 +3,11 @@ import "swiper/css";
 
 function Utama() {
   return (
-    <Swiper
-      spaceBetween={0}
-      slidesPerView={1}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-    </Swiper>
+    <h1>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem esse
+      ex quam qui, accusantium ad ducimus repellat natus sapiente rerum quis,
+      doloribus hic corporis debitis minima praesentium vero earum. Dolor!
+    </h1>
   );
 }
 
