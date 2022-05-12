@@ -4,7 +4,7 @@ import iconCari from "../img/iconCari.png";
 import menuIcon from "../img/menu.svg";
 import cart from "../img/cart.png";
 import MenuMobile from "./menuMobile";
-
+import { setup } from "../../config";
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="flex p-7 bg-blue-50 items-center w-screen justify-between">
         <div className="hidden md:flex items-center">
           <img src={dummyLogo} className="h-10 hidden md:block" />
-          <h1 className="pl-3 hidden md:block">TOKOPAKEDI</h1>
+          <h1 className="pl-3 hidden md:block ">{setup.namaApp}</h1>
         </div>
         <form action="" className="flex items-center">
           <input
@@ -25,7 +25,7 @@ const Navbar = () => {
             name="cariBarang"
             id=""
             placeholder="Cari di Tokopakedi"
-            className="p-2 pl-5 pr-5 rounded-xl text-sm md:p-2 md:pl:3 md:r:3 md:w-[30vw]"
+            className="p-2 w-40 pl-5 pr-5 rounded-xl text-sm md:p-2 md:pl:3 md:r:3 md:w-[30vw]"
           />
           <button>
             <img src={iconCari} alt="" className="h-5 ml-2" />
