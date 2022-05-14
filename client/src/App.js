@@ -1,6 +1,4 @@
-
 import './App.css';
-import Home from './Component/Home.js';
 import "./App.css";
 import Navbar from "./Component/Navbar/Navbar";
 import Utama from "./Component/Utama/Utama";
