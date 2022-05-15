@@ -3,6 +3,8 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 8000;
 const authRoute = require("./routes/authRoute")
+const productRoute = require("./routes/productRoute")
+require("./routes/productRoute")
 const mongoose = require("mongoose")
 require("dotenv").config();
 const path = require("path")
@@ -14,7 +16,7 @@ app.use(express.urlencoded({
 }))
 app.use(express.static(path.join(__dirname,"public")))
 app.use("/api/auth",authRoute)
-
+app.use("/api/product", productRoute)
 app.listen(PORT, async () => {
   console.log(`Server Berjalan Pada Port ${PORT}`);
   console.log("Menunggu Koneksi Ke Database ...");
