@@ -7,9 +7,9 @@ import Login from "./Component/Login/Login";
 function App() {
   return (
     <div className="App">
-    {/*  <Navbar />
-      <Utama />*/}
-      <Login />
+    	<Navbar />
+     	<Utama />
+      {/*<Login />*/}
     </div>
   );
 }

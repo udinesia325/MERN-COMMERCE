@@ -12,6 +12,14 @@ function MenuMobile() {
         </div>
       </div>
       {/* ///////// */}
+      <div className="flex w-full mt-4">
+        <button type="submit" className="block w-[45%] bg-green-400 text-white font-semibold rounded-md py-1 px-2 mr-auto shadow-md">
+          Log In
+        </button>
+        <button type="submit" className="block w-[45%] bg-red-400 text-white font-semibold rounded-md py-1 px-2 ml-auto shadow-md">
+           Log Out
+        </button>
+      </div>
       <h1 className="font-bold text-lg  mt-5 text-gray-700">
         Riwayat Aktivitas
       </h1>
