@@ -13,7 +13,7 @@ const Navbar = () => {
     console.log(toggleMenu);
   };
   return (
-    <nav className="fixed">
+    <nav className="sticky top-0 z-50">
       <div className="flex p-7 bg-blue-50 items-center w-screen justify-between">
         <div className="hidden md:flex items-center">
           <img src={dummyLogo} className="h-10 hidden md:block" />
@@ -36,6 +36,8 @@ const Navbar = () => {
           <button>
             <img src={cart} alt="" className="h-6 mr-3 ml-3" />
           </button>
+          <button className="block bg-green-400 text-white font-semibold rounded-md py-1 px-2 mr-2 shadow-md">Log In</button>
+          <button className="block bg-red-400 text-white font-semibold rounded-md py-1 px-2 shadow-md">Log Out</button>
           <button onClick={toggleHandler} className="">
             <img src={menuIcon} className="mr-3 ml-3" />
           </button>

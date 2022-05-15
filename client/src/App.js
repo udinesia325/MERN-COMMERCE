@@ -2,16 +2,14 @@ import './App.css';
 import "./App.css";
 import Navbar from "./Component/Navbar/Navbar";
 import Utama from "./Component/Utama/Utama";
+import Login from "./Component/Login/Login";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <br />
-      <br />
-      <br />
-      <br />
-      <Utama />
+    {/*  <Navbar />
+      <Utama />*/}
+      <Login />
     </div>
   );
 }
