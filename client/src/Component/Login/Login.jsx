@@ -1,24 +1,34 @@
-
+import { Link } from "react-router-dom";
 
 function Login() {
 	return (
-		<div className="container w-full bg-center m-auto mt-[30px] h-[600px] bg-bgLogin relative rounded-lg shadow-xl">
-			<span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 text-4xl font-bold absolute top-80 left-72">
-				TOKOPAKEDI login
-			</span>
-			<div className="boxLogin rounded-lg w-96 h-96 bg-white shadow-md absolute top-36 right-0 p-4 bg-gradient-to-r from-cyan-500 to-blue-500">
-				<h1 className="font-bold text-cyan-200 text-center text-xl">Log in</h1>
-				<div className="username flex flex-col mt-8">
-					<label htmlFor="username" className="text-white font-semibold">Username</label>
-					<input type="text" id="username" className="rounded-md px-2 py-1" />
-				</div>
-				<div className="password flex flex-col my-8">
-					<label htmlFor="password" className="text-white font-semibold">Password</label>
-					<input type="passowrd" id="password" className="rounded-md px-2 py-1" />
-				</div>
-				<button type="submit" className="bg-blue-400 rounded-lg text-white font-semibold block w-full px-2 py-1">LOG IN</button>
-			</div>
-		</div>
+		<div class="flex justify-center items-center h-screen bg-bgSignUp bg-no-repeat bg-cover">
+      <div class="p-6 rounded-md shadow-lg bg-white w-96">
+        <h1 class="text-3xl font-bold mb-5 text-blue-600 text-center align-middle">Log In</h1>
+        <form>
+          <div class="flex flex-col gap-2">
+            <div class="form-group mb-6">
+              <input type="text" class="form-control block w-full px-3 py-2.5
+                  text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                  rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                placeholder="Username" required />
+            </div>
+            <div class="form-group mb-6">
+              <input type="password" class="form-control block w-full px-3 py-2.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                  rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                  required:border-red-600"
+                placeholder="Password" />
+            </div>
+            <button type="submit" class="
+            w-full px-6 py-4 bg-blue-600 text-white  font-medium text-xs leading-tight uppercaserounded shadow-md
+            hover:bg-blue-700 hover:shadow-lgfocus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+            	Log In
+            </button>
+          </div>
+        </form>
+        <p className="text-center text-sm mt-5 text-gray-600">Belum punya akun? <Link to="/signup" className="underline-offset-1 underline decoration-solid text-blue-600">Sign Up</Link></p>
+      </div>    
+    </div>
 	)
 }
 

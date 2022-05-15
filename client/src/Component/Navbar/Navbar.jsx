@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import dummyLogo from "../img/dummyLogo.png";
 import iconCari from "../img/iconCari.png";
 import menuIcon from "../img/menu.svg";
+import closeIcon from "../img/close.svg";
 import cart from "../img/cart.png";
 import MenuMobile from "./menuMobile";
+
 import { setup } from "../../config";
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -37,7 +39,7 @@ const Navbar = () => {
             <img src={cart} alt="" className="h-6 mr-3 ml-3" />
           </button>
           <button onClick={toggleHandler} className="">
-            <img src={menuIcon} className="mr-3 ml-3" />
+          <img src={toggleMenu? closeIcon : menuIcon} className="mr-3 ml-3" />
           </button>
         </div>
       </div>
