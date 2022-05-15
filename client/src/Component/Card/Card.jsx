@@ -3,7 +3,7 @@ import cart from "../img/cart.png";
 
 const Card = () => {
   return (
-    <div className="card w-72 mt-8 shadow-lg py-2 hover:cursor-pointer hover:shadow-2xl">
+    <div className="card w-72 duration-500 mt-8 shadow-lg py-2 hover:cursor-pointer hover:shadow-2xl">
     	<img className="h-32 m-auto" src={redmi7A} alt="" />
     	<h2 className="ml-2 font-semibold text-lg mt-2 text-blue-400">Redmi 7A</h2>
     	<p className="ml-2 text-base font-semibold">

@@ -36,6 +36,8 @@ const Navbar = () => {
           <button>
             <img src={cart} alt="" className="h-6 mr-3 ml-3" />
           </button>
+          <button className="block bg-green-400 text-white font-semibold rounded-md py-1 px-2 mr-2 shadow-md">Log In</button>
+          <button className="block bg-red-400 text-white font-semibold rounded-md py-1 px-2 shadow-md">Log Out</button>
           <button onClick={toggleHandler} className="">
             <img src={menuIcon} className="mr-3 ml-3" />
           </button>
