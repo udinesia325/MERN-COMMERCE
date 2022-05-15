@@ -13,7 +13,7 @@ const Navbar = () => {
     console.log(toggleMenu);
   };
   return (
-    <nav className="fixed">
+    <nav className="sticky top-0 z-50">
       <div className="flex p-7 bg-blue-50 items-center w-screen justify-between">
         <div className="hidden md:flex items-center">
           <img src={dummyLogo} className="h-10 hidden md:block" />

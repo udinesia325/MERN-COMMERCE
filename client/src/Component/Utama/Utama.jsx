@@ -3,8 +3,6 @@ import {
   SwiperSlide
 } from "swiper/react";
 import "swiper/css";
-import redmi7A from "../img/redmi7A.png";
-import cart from "../img/cart.png";
 import Card from "../Card/Card"
 
 function Utama() {
