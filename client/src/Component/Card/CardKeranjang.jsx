@@ -1,8 +1,7 @@
 import redmi7A from "../img/redmi7A.png";
 import cart from "../img/cart.png";
-import { Link } from "react-router-dom";
 
-const Card = () => {
+const CardKeranjang = () => {
   return (
     <div className="card h-[350px] rounded-lg w-full sm:w-64 md:w-80 lg:w-72 duration-500 mt-8 shadow-lg py-2 hover:cursor-pointer hover:shadow-2xl">
     	<img className="h-32 m-auto" src={redmi7A} alt="" />
@@ -30,19 +29,15 @@ const Card = () => {
           &#9733;
         </p>
       </div>
-    	<p className="ml-2 mt-2">
+    	<p className="ml-2">
         RP 1,199,000
       </p>
-    	<div className="w-full flex mt-5">
-    		<button className="w-full border-2 rounded-bl-lg border-green-500 hover:shadow-lg bg-green-400 text-base font-semibold text-white py-1 px-4 block ml-auto">
+    	<div className="w-full flex mt-2">
+    		<button className="hover:shadow-lg bg-green-400 text-base font-semibold text-white py-1 px-4 rounded-lg block ml-auto mr-2">
           Beli
         </button>
-    		<button className="w-full border-2 rounded-br-lg border-blue-500 hover:shadow-lg bg-blue-400 text-base font-semibold text-white py-1 px-4 flex items-center">
-    			<img className="w-5 mr-1" src={cart} alt="" />
-    			<Link to="/keranjang">Keranjang</Link>
-    		</button>
       </div>
     </div>
   )
 }
-export default Card;
+export default CardKeranjang;
