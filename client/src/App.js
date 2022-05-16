@@ -3,7 +3,7 @@ import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import Utama from "./Component/Utama/Utama";
 import Login from "./Component/Login/Login";
-import Signup from './Signup/Signup';
+import Signup from './Component/Signup/Signup';
 import Keranjang from './Component/Keranjang/Keranjang';
 
 function App() {
