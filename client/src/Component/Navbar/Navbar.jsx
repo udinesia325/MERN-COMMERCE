@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import dummyLogo from "../img/dummyLogo.png";
 import iconCari from "../img/iconCari.png";
 import menuIcon from "../img/menu.svg";
@@ -36,10 +37,8 @@ const Navbar = () => {
 
         <div className="flex items-center">
           <button>
-            <img src={cart} alt="" className="h-6 mr-3 ml-3" />
+            <Link to="/keranjang"><img src={cart} alt="" className="h-6 mr-3 ml-3" /></Link>
           </button>
-          <button className="block bg-green-400 text-white font-semibold rounded-md py-1 px-2 mr-2 shadow-md">Log In</button>
-          <button className="block bg-red-400 text-white font-semibold rounded-md py-1 px-2 shadow-md">Log Out</button>
           <button onClick={toggleHandler} className="">
           <img src={toggleMenu? closeIcon : menuIcon} className="mr-3 ml-3" />
           </button>
