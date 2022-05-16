@@ -2,18 +2,18 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 8000;
-const authRoute = require("./routes/authRoute")
-const productRoute = require("./routes/productRoute")
-require("./routes/productRoute")
-const mongoose = require("mongoose")
+const authRoute = require("./routes/authRoute");
+const productRoute = require("./routes/productRoute");
+require("./routes/productRoute");
+const mongoose = require("mongoose");
 require("dotenv").config();
-const path = require("path")
+const path = require("path");
 //middleware
-app.use(cors())
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 app.use(express.urlencoded({
   extended: true
-}))
+}));
 app.use(express.static(path.join(__dirname,"public")))
 app.use("/api/auth",authRoute)
 app.use("/api/product", productRoute)
