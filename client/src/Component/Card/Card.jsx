@@ -33,14 +33,18 @@ const Card = () => {
     	<p className="ml-2 mt-2">
         RP 1,199,000
       </p>
-    	<div className="w-full flex mt-5">
-    		<button className="w-full border-2 rounded-bl-lg border-green-500 hover:shadow-lg bg-green-400 text-base font-semibold text-white py-1 px-4 block ml-auto">
-          Beli
-        </button>
-    		<button className="w-full border-2 rounded-br-lg border-blue-500 hover:shadow-lg bg-blue-400 text-base font-semibold text-white py-1 px-4 flex items-center">
-    			<img className="w-5 mr-1" src={cart} alt="" />
-    			<Link to="/keranjang">Keranjang</Link>
-    		</button>
+    	<div className="w-full flex mt-5 gap-1">
+        <Link to="/beli" className="w-full border-2 rounded-bl-lg border-green-500 hover:shadow-lg bg-green-400 text-base font-semibold text-white py-1 px-4 block ml-auto flex items-center">
+      		<button className="w-full flex items-center justify-center">
+            Beli
+          </button>
+        </Link>
+        <Link to="/keranjang" className="w-full border-2 rounded-br-lg border-blue-500 hover:shadow-lg bg-blue-400 text-base font-semibold text-white py-1 px-4 flex items-center">
+      		<button className="w-full flex items-center justify-center">
+      			<img className="w-5 mr-1" src={cart} alt="" />
+      			Keranjang
+      		</button>
+        </Link>
       </div>
     </div>
   )
