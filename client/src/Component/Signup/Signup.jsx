@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
 function Signup() {
   return (
@@ -100,7 +101,7 @@ function Signup() {
                     duration-150
                     ease-in-out">Sign up</button>
                 </form>
-                <p class="text-center text-sm mt-5 text-gray-600">Already have an account? <a href='' class="underline-offset-1 underline decoration-solid text-blue-600">Sign In</a></p>
+                <p class="text-center text-sm mt-5 text-gray-600">Already have an account? <Link to="/login" class="underline-offset-1 underline decoration-solid text-blue-600">Sign In</Link></p>
             </div>    
         </div>
   )
