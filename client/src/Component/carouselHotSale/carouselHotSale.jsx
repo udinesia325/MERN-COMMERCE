@@ -46,7 +46,7 @@ const CarouselHotSale = () => {
                             <img
                                 key={index}
                                 src={poster.img}
-                                class="block w-full h-80 object-fill"
+                                class="block w-full sm:h-80 h-36 object-fill"
                                 alt={poster.alt}
                             />
                             </div>
