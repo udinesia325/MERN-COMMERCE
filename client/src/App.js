@@ -3,15 +3,27 @@ import "./App.css";
 import Navbar from "./Component/Navbar/Navbar";
 import Utama from "./Component/Utama/Utama";
 import Login from "./Component/Login/Login";
-import Signup from './Signup/Signup';
-
+import Cart from "./Component/Cart/Cart";
+import Signup from './Component/Signup/Signup';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import {loginSuccess} from "./redux/actions/loginActions"
 function App() {
   return (
     <div className="App">
-     {/* <Navbar />
-      <Utama />
+    <Router>
+      <Navbar />
+      <Routes>
+      <Route path="/" element={<Utama />} exact />
+      <Route path="/login" element={<Login />} exact />
+      <Route path="/signup" element={<Signup />} exact />
+      <Route path="/Cart" element={<Cart />} exact />
+     
+      </Routes>
+   {/*   <Utama />
       <Login /> */}
-      <Signup />
+      {/*<Signup />*/}
+     {/* <Login />*/}
+     </Router>
     </div>
   );
 }

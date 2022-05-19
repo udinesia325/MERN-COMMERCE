@@ -5,15 +5,19 @@ import menuIcon from "../img/menu.svg";
 import closeIcon from "../img/close.svg";
 import cart from "../img/cart.png";
 import MenuMobile from "./menuMobile";
-
+import {Link} from "react-router-dom"
+import {useSelector,useDispatch} from "react-redux"
+import {logout} from "../../redux/actions/loginActions"
 import { setup } from "../../config";
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const toggleHandler = () => {
     setToggleMenu(!toggleMenu);
-    console.log(toggleMenu);
+    //console.log(toggleMenu);
   };
+  const loginState = useSelector(state => state.login)
+  const dispatch = useDispatch()
   return (
     <nav className="sticky top-0 z-50">
       <div className="flex p-7 bg-blue-50 items-center w-screen justify-between">
@@ -35,11 +39,11 @@ const Navbar = () => {
         </form>
 
         <div className="flex items-center">
-          <button>
+          <Link to="/cart">
             <img src={cart} alt="" className="h-6 mr-3 ml-3" />
-          </button>
-          <button className="block bg-green-400 text-white font-semibold rounded-md py-1 px-2 mr-2 shadow-md">Log In</button>
-          <button className="block bg-red-400 text-white font-semibold rounded-md py-1 px-2 shadow-md">Log Out</button>
+          </Link>
+          {!loginState.isLogin &&<Link to="/login" className="block bg-green-400 text-white font-semibold rounded-md py-1 px-2 mr-2 shadow-md">Log In</Link>}
+         {loginState.isLogin && <button className="block bg-red-400 text-white font-semibold rounded-md py-1 px-2 shadow-md" onClick={()=>dispatch(logout())}  >Log Out</button>}
           <button onClick={toggleHandler} className="">
           <img src={toggleMenu? closeIcon : menuIcon} className="mr-3 ml-3" />
           </button>
