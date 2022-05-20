@@ -10,7 +10,7 @@ const login = async (req,res) => {
     
     //jika tidak ada user di temukan
     if(userData == null){
-      throw Error("Username tidak di temukan !")
+      throw "Username tidak di temukan !"
     }
     if(userData.active == false){
       throw Error("User Masih Belum Diaktivasi oleh admin")
