@@ -5,7 +5,10 @@ module.exports = {
     	backgroundImage: {
     		'bgLogin': "url('./Component/img/bgLogin.png')",
         'bgSignUp': "url('./Component/img/signupbg.jpg')"
-    	}
+    	},
+      fontFamily: {
+        'poppins' : ["'Poppins'", "sans-serif"]
+      }
     },
   },
   plugins: [],
