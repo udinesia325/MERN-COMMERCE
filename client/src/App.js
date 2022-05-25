@@ -7,11 +7,14 @@ import Cart from "./Component/Cart/Cart";
 import Signup from './Component/Signup/Signup';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import {loginSuccess} from "./redux/actions/loginActions"
+import CarouselHotSale from "./Component/carouselHotSale/carouselHotSale.jsx"
+
 function App() {
   return (
     <div className="App">
     <Router>
       <Navbar />
+      <CarouselHotSale />
       <Routes>
       <Route path="/" element={<Utama />} exact />
       <Route path="/login" element={<Login />} exact />
