@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -20,20 +20,22 @@ const CarouselHotSale = () => {
             img: 'https://cf.shopee.co.id/file/82ad482b72e88b206fa1bbdd2cce8dfb',
             alt: ''
         },
-        {
-            img: 'https://cf.shopee.co.id/file/e1ca037f90739bd6de09526b20ff4458',
-            alt: ''
-        },
     ]
     return (
         <Swiper
         // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
         loop={true}
-        autoplay={{delay: 1000}}
-        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        navigation={{
+            nextEl: <a />,
+            prevEl: <a />
+        }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
         >
@@ -46,7 +48,7 @@ const CarouselHotSale = () => {
                             <img
                                 key={index}
                                 src={poster.img}
-                                class="block w-full sm:h-80 h-36 object-fill"
+                                class="block w-full aspect-auto object-fill"
                                 alt={poster.alt}
                             />
                             </div>
