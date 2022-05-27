@@ -32,10 +32,6 @@ const CarouselHotSale = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        navigation={{
-            nextEl: <a />,
-            prevEl: <a />
-        }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
         >
