@@ -32,23 +32,19 @@ const CarouselHotSale = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        navigation={{
-            nextEl: <a />,
-            prevEl: <a />
-        }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
         >
         {hotSaleProduct.map((poster, index) => {
             return(  
                 <SwiperSlide>
-                    <div class="carousel slide relative w-screen" data-bs-ride="carousel">
-                        <div class="carousel-inner relative w-full overflow-hidden">
-                            <div class="carousel-item active relative float-left w-full">
+                    <div className="carousel slide relative w-screen" data-bs-ride="carousel">
+                        <div className="carousel-inner relative w-full overflow-hidden">
+                            <div className="carousel-item active relative float-left w-full">
                             <img
                                 key={index}
                                 src={poster.img}
-                                class="block w-full aspect-auto object-fill"
+                                className="block w-full aspect-auto object-fill"
                                 alt={poster.alt}
                             />
                             </div>
