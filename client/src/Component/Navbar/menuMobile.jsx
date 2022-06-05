@@ -9,10 +9,10 @@ function MenuMobile() {
 
   return (
     <div className="h-screen w-72 
-                   float-right 
+                   absolute right-0 
                    bg-red-600 
                    z-50 
-                   p-5 
+                   p-5
                    shadow-xl ">
 
         <div className="flex flex-col items-center gap-y-4">
