@@ -18,7 +18,7 @@ function Login() {
     // 	</div>
     // </div>n
 
-    // Cobain tampilan ane bang :v
+    // Cobain tampilan ane bang :v, nanti logicnya tinggal pakai,
 
     <div className="w-screen h-screen flex bg-sky-300 items-center justify-center">
       <div className="flex justify-center items-center">
