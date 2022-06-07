@@ -1,13 +1,13 @@
 import "./App.css";
 import "./App.css";
-import Navbar from "./Component/Navbar/Navbar";
-import Utama from "./Component/Utama/Utama";
+// import Navbar from "./Component/Navbar/Navbar";
+// import Utama from "./Component/Utama/Utama";
 import Login from "./Component/Login/Login";
-import Cart from "./Component/Cart/Cart";
-import Signup from "./Component/Signup/Signup";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { loginSuccess } from "./redux/actions/loginActions";
-import CarouselHotSale from "./Component/carouselHotSale/carouselHotSale.jsx";
+// import Cart from "./Component/Cart/Cart";
+// import Signup from "./Component/Signup/Signup";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { loginSuccess } from "./redux/actions/loginActions";
+// import CarouselHotSale from "./Component/carouselHotSale/carouselHotSale.jsx";
 
 function App() {
   return (
@@ -24,8 +24,8 @@ function App() {
     //   </Routes> */}
       {/*   <Utama />
       <Login /> */}
-      <Signup />
-      {/* <Login />*/}
+      {/* <Signup /> */}
+      <Login />
       {/* //  </Router> */}
     </div>
   );
