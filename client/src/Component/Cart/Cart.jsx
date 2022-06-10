@@ -9,7 +9,7 @@ export default function () {
   useEffect(()=>{
   //jika belum login kembaliin ke home
     if(!loginState.isLogin){
-      navigate("/")
+     // navigate("/")
     }
   },[loginState])
   return (

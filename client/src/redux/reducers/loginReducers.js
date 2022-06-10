@@ -40,6 +40,11 @@ const reducer = (state=initialState ,action) => {
          isLogin:false,
          token:""
        }
+     case "CLEAR":
+       return {
+         ...initialState,
+         error:""
+       }
     default : return state
   }
 }
