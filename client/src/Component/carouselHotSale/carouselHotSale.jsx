@@ -37,7 +37,7 @@ const CarouselHotSale = () => {
         >
         {hotSaleProduct.map((poster, index) => {
             return(  
-                <SwiperSlide key={index}>
+                <SwiperSlide>
                     <div className="carousel slide relative w-screen" data-bs-ride="carousel">
                         <div className="carousel-inner relative w-full overflow-hidden">
                             <div className="carousel-item active relative float-left w-full">
