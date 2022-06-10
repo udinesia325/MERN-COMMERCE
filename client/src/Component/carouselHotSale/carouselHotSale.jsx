@@ -39,14 +39,14 @@ const CarouselHotSale = () => {
         >
         {hotSaleProduct.map((poster, index) => {
             return(  
-                <SwiperSlide>
-                    <div class="carousel slide relative w-screen" data-bs-ride="carousel">
-                        <div class="carousel-inner relative w-full overflow-hidden">
-                            <div class="carousel-item active relative float-left w-full">
+                <SwiperSlide key={index}>
+                    <div className="carousel slide relative w-screen" data-bs-ride="carousel">
+                        <div className="carousel-inner relative w-full overflow-hidden">
+                            <div className="carousel-item active relative float-left w-full">
                             <img
                                 key={index}
                                 src={poster.img}
-                                class="block w-full h-80 object-fill"
+                                className="block w-full h-80 object-fill"
                                 alt={poster.alt}
                             />
                             </div>

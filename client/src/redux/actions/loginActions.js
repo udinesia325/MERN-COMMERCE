@@ -1,4 +1,4 @@
-import axios from "axios"
+import {axiosInstance} from "../../config"
 import {LOGIN_SUCCESS,LOGIN_REQ,LOGIN_FAIL,LOGOUT} from "../types/loginTypes"
 export const loginSuccess = (payload) => {
   return {
@@ -25,7 +25,7 @@ export const logout= () => {
 export const loginProcess = (username,password) => async (dispatch) => {
   dispatch(loginRequest())
   try{
-    const response = await axios.post("http://localhost:8000/api/auth/login",{username, password})
+    const response = await axiosInstance.post("auth/login",{username, password})
     
     dispatch(loginSuccess(response.data))
   }catch(e){
