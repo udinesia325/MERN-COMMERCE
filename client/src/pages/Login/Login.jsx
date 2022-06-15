@@ -20,11 +20,15 @@ function Login() {
     setPass(e.target.value.trim());
   };
   useEffect(() => {
-    if (loginState.isLogin) {
+    if (loginState.isLogin && loginState.error.length > 0) {
       dispatch({type:"CLEAR"})
-      navigate(-1);
     }
   }, [loginState]);
+  useEffect(() => {
+    if (loginState.isLogin) {
+      navigate("/")
+    }
+  }, [loginState.isLogin]);
   return (
     <div className="w-screen h-screen flex bg-sky-300 items-center justify-center">
       <div className="flex justify-center items-center">
