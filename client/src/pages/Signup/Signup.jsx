@@ -97,7 +97,7 @@ function Signup() {
                     duration-150
                     ease-in-out">Sign up</button>
                 </form>
-                <p className="text-center text-sm mt-5 text-gray-600">Already have an account? 
+                <p className="text-center text-sm mt-5 text-gray-600">Already have an account?&nbsp;
                   <Link to="/login" className="underline-offset-1 hover:underline decoration-solid text-black-600">Sign In</Link>
                 </p>
             </div>    

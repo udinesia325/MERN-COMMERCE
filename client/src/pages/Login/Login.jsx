@@ -28,7 +28,7 @@ function Login() {
   return (
     <div className="w-screen h-screen flex bg-sky-300 items-center justify-center">
       <div className="flex justify-center items-center">
-        <div className="bg-sky-100 p-9 h-screen w-screen md:w-[50vw] flex items-center justify-center rounded-r-3xl">
+        <div className="bg-sky-100 p-9 h-screen w-screen md:w-[50vw] flex items-center justify-center">
           <div className="">
             <h1 className="text-center mb-11 font-bold text-2xl text-gray-800">
               TOKOKPAKEDI
