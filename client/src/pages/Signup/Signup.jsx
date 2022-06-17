@@ -37,7 +37,7 @@ function Signup() {
                     h-screen 
                     bg-bgSignUp bg-no-repeat bg-cover">
             <div className="p-6 rounded-md shadow-lg bg-white w-96">
-            <h1 className="text-3xl font-bold mb-5 text-blue-600 text-center align-middle">Sign Up</h1>
+            <h1 className="text-3xl font-bold mb-5 text-black-600 text-center align-middle">Sign Up</h1>
             <p>{message}</p>
                 <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-2 gap-3">
@@ -75,15 +75,14 @@ function Signup() {
                             transition
                             ease-in-out
                             m-0
-                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-                            required:border-red-600"
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             placeholder="Password" onChange={handlePass} required />
                     </div>
                     <button type="submit" className="
                     w-full
                     px-6
                     py-4
-                    bg-blue-600
+                    bg-red-600
                     text-white
                     font-medium
                     text-xs
@@ -91,14 +90,16 @@ function Signup() {
                     uppercase
                     rounded
                     shadow-md
-                    hover:bg-blue-700 hover:shadow-lg
-                    focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-                    active:bg-blue-800 active:shadow-lg
+                    hover:bg-red-700 hover:shadow-lg
+                    focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0
+                    active:bg-red-800 active:shadow-lg
                     transition
                     duration-150
                     ease-in-out">Sign up</button>
                 </form>
-                <p className="text-center text-sm mt-5 text-gray-600">Already have an account? <Link to="/login" className="underline-offset-1 underline decoration-solid text-blue-600">Sign In</Link></p>
+                <p className="text-center text-sm mt-5 text-gray-600">Already have an account? 
+                  <Link to="/login" className="underline-offset-1 hover:underline decoration-solid text-black-600">Sign In</Link>
+                </p>
             </div>    
         </div>
   )
