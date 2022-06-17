@@ -7,16 +7,34 @@ function MenuMobile() {
   const loginState = useSelector(state => state.login)
  const dispatch = useDispatch()
   return (
-    <div className="h-screen w-72 float-right bg-blue-50 z-50 p-5 md:m-3 md:rounded-2xl shadow-xl ">
-      <div className="flex bg-blue-100 p-5 rounded-lg items-center shadow-md">
-        <img src={dummyUser} className="h-10 mr-5" />
-        <div className="">
-          <h1 className="text-sm text-center font-bold text-gray-700">
-            {loginState.username}
-          </h1>
+    <div className="h-screen w-72 
+                   absolute right-0 
+                   bg-red-600 
+                   z-50 
+                   p-5
+                   shadow-xl ">
+
+        <div className="flex flex-col items-center gap-y-4">
+
+          <img src={dummyUser} className="p-1 
+                                          w-24 aspect-w-1 
+                                          border-white-300 border-2 rounded-full" />
+
+          <div className="text-center mb-4">
+              {loginState.isLogin && 
+                <p className="text-white text-sm font-thin">{loginState.username}</p>
+              }
+              {!loginState.isLogin &&
+                <p className="text-white text-sm font-thin font-poppins">Anda belum login, silahkan&nbsp;
+                <Link to="/login" className="md:hidden
+                                            text-white
+                                            underline">login
+                </Link>.</p>
+              }
+          </div>
+
         </div>
-      </div>
-      {/* ///////// */}
+      
       <h1 className="font-bold text-lg  mt-5 text-gray-700">
         Riwayat Aktivitas
       </h1>
