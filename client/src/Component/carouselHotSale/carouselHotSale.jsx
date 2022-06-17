@@ -32,8 +32,6 @@ const CarouselHotSale = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
         >
         {hotSaleProduct.map((poster, index) => {
             return(  
