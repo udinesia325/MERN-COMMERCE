@@ -1,12 +1,11 @@
 import dummyUser from "../img/dummyUser.png";
-import {useSelector} from "react-redux"
-import { AiOutlineHistory } from 'react-icons/ai'
+import {useSelector, useDispatch} from "react-redux"
 import {Link} from "react-router-dom"
-
+import {logout} from "../../redux/actions/loginActions"
 
 function MenuMobile() {
   const loginState = useSelector(state => state.login)
-
+ const dispatch = useDispatch()
   return (
     <div className="h-screen w-72 
                    absolute right-0 
@@ -35,12 +34,16 @@ function MenuMobile() {
           </div>
 
         </div>
-        
-        <div className="flex gap-2 items-center">
-          <AiOutlineHistory className="text-white" />
-          <p className="font-medium font-poppins text-base text-white tracking-wide">Riwayat aktivitas</p>
-        </div>
-
+      
+      <h1 className="font-bold text-lg  mt-5 text-gray-700">
+        Riwayat Aktivitas
+      </h1>
+      
+      {
+        loginState.isLogin ? 
+      <button onClick={()=>dispatch(logout())} className="h-8 w-1/2 bg-red-400 text-white font-semibold block mx-auto">Logout</button> :
+      <Link to="/login" className="h-8 w-1/2 bg-steal-600 text-white font-semibold text-center">Login</Link>
+      }
     </div>
   );
 }
